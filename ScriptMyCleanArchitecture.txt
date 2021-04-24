@@ -42,12 +42,12 @@ cd ..
 dotnet restore
 dotnet build
 
-# New-Item -Name ./src/ApplicationCore/Entities/emptyFile.txt
-# New-Item -Name ./src/ApplicationCore/Exceptions/emptyFile.txt
-# New-Item -Name ./src/ApplicationCore/Interfaces/emptyFile.txt
-# New-Item -Name ./src/ApplicationCore/Services/emptyFile.txt
-# New-Item -Name ./src/ApplicationCore/Specifications/emptyFile.txt
+touch ./src/ApplicationCore/Entities/emptyFile.txt
+touch ./src/ApplicationCore/Exceptions/emptyFile.txt
+touch ./src/ApplicationCore/Interfaces/emptyFile.txt
+touch ./src/ApplicationCore/Services/emptyFile.txt
+touch ./src/ApplicationCore/Specifications/emptyFile.txt
 
-# New-Item -Name ./src/Infrastructure/Data/Configs/emptyFile.txt
-# New-Item -Name ./src/Infrastructure/Data/Migrations/emptyFile.txt
-# New-Item -Name ./src/Infrastructure/Services/emptyFile.txt
+touch ./src/Infrastructure/Data/Configs/emptyFile.txt
+touch ./src/Infrastructure/Data/Migrations/emptyFile.txt
+touch ./src/Infrastructure/Services/emptyFile.txt
