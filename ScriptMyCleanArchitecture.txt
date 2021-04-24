@@ -17,6 +17,7 @@ cd ..
 dotnet sln MyCleanArchitecture.sln add ./src/WebApi/
 dotnet sln MyCleanArchitecture.sln add ./src/ApplicationCore/
 dotnet sln MyCleanArchitecture.sln add ./src/Infrastructure/
+dotnet sln MyCleanArchitecture.sln add ./test/Test/
 
 dotnet add ./src/Infrastructure reference ./src/ApplicationCore/
 dotnet add ./src/WebApi reference ./src/ApplicationCore/
