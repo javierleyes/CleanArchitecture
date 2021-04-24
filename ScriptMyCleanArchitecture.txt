@@ -11,39 +11,39 @@ dotnet new classlib -n ApplicationCore -f netcoreapp3.1 --no-restore
 dotnet new classlib -n Infrastructure -f netcoreapp3.1 --no-restore
 dotnet new webapi -n WebApi -f netcoreapp3.1 --no-restore
 
-dotnet sln ..\MyCleanArchitecture.sln add .\WebApi\
-dotnet sln ..\MyCleanArchitecture.sln add .\ApplicationCore\
-dotnet sln ..\MyCleanArchitecture.sln add .\Infrastructure\
+dotnet sln MyCleanArchitecture.sln add ./src/WebApi/
+dotnet sln MyCleanArchitecture.sln add ./src/ApplicationCore/
+dotnet sln MyCleanArchitecture.sln add ./src/Infrastructure/
 
-dotnet add .\Infrastructure\ reference .\ApplicationCore\
-dotnet add .\WebApi reference .\ApplicationCore\
-dotnet add .\WebApi reference .\Infrastructure\
+dotnet add ./src/Infrastructure reference ./src/ApplicationCore/
+dotnet add ./src/WebApi reference ./src/ApplicationCore/
+dotnet add ./src/WebApi reference ./src/Infrastructure/
 
-rm .\ApplicationCore\Class1.cs
-rm .\Infrastructure\Class1.cs
-rm .\WebApi\WeatherForecast.cs
-rm .\WebApi\Controllers\WeatherForecastController.cs
+rm ./src/ApplicationCore/Class1.cs
+rm ./src/Infrastructure/Class1.cs
+rm ./src/WebApi/WeatherForecast.cs
+rm ./src/WebApi/Controllers/WeatherForecastController.cs
 
-mkdir .\ApplicationCore\Entities
-mkdir .\ApplicationCore\Exceptions
-mkdir .\ApplicationCore\Interfaces
-mkdir .\ApplicationCore\Services
-mkdir .\ApplicationCore\Specifications
+mkdir ./src/ApplicationCore/Entities
+mkdir ./src/ApplicationCore/Exceptions
+mkdir ./src/ApplicationCore/Interfaces
+mkdir ./src/ApplicationCore/Services
+mkdir ./src/ApplicationCore/Specifications
 
-mkdir .\Infrastructure\Data\Configs
-mkdir .\Infrastructure\Data\Migrations
-mkdir .\Infrastructure\Services
+mkdir ./src/Infrastructure/Data/Configs
+mkdir ./src/Infrastructure/Data/Migrations
+mkdir ./src/Infrastructure/Services
 
 cd ..
 dotnet restore
 dotnet build
 
-# New-Item -Name .\ApplicationCore\Entities\emptyFile.txt
-# New-Item -Name .\ApplicationCore\Exceptions\emptyFile.txt
-# New-Item -Name .\ApplicationCore\Interfaces\emptyFile.txt
-# New-Item -Name .\ApplicationCore\Services\emptyFile.txt
-# New-Item -Name .\ApplicationCore\Specifications\emptyFile.txt
-# 
-# New-Item -Name .\Infrastructure\Data\Configs\emptyFile.txt
-# New-Item -Name .\Infrastructure\Data\Migrations\emptyFile.txt
-# New-Item -Name .\Infrastructure\Services\emptyFile.txt
+# New-Item -Name ./src/ApplicationCore/Entities/emptyFile.txt
+# New-Item -Name ./src/ApplicationCore/Exceptions/emptyFile.txt
+# New-Item -Name ./src/ApplicationCore/Interfaces/emptyFile.txt
+# New-Item -Name ./src/ApplicationCore/Services/emptyFile.txt
+# New-Item -Name ./src/ApplicationCore/Specifications/emptyFile.txt
+
+# New-Item -Name ./src/Infrastructure/Data/Configs/emptyFile.txt
+# New-Item -Name ./src/Infrastructure/Data/Migrations/emptyFile.txt
+# New-Item -Name ./src/Infrastructure/Services/emptyFile.txt
