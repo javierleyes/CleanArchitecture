@@ -51,3 +51,5 @@ touch ./src/ApplicationCore/Specifications/emptyFile.txt
 touch ./src/Infrastructure/Data/Configs/emptyFile.txt
 touch ./src/Infrastructure/Data/Migrations/emptyFile.txt
 touch ./src/Infrastructure/Services/emptyFile.txt
+
+touch ./src/WebApi/Controllers/emptyFile.txt
